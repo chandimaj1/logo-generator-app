@@ -1,12 +1,11 @@
 import { makeStyles, Typography, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
-import InfoIcon from '@material-ui/icons/Info';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CropFreeIcon from '@material-ui/icons/CropFree';
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import { BrowserRouter as Link} from "react-router-dom";
 
 
 const useStyles = makeStyles(theme => ({
