@@ -36,23 +36,22 @@ export function updateUser(data){
 
 export function getAllUsers() {
     if (localStorage.getItem(KEYS.users)==null)
-        localStorage.setItem(KEYS.users, JSON.stringify([{}]) );
+        localStorage.setItem(KEYS.users, JSON.stringify([]) );
     let users = JSON.parse( localStorage.getItem(KEYS.users) );
     //map industries id to indistries title
     
     let industries = getIndustriesList();
 
-    console.log(generateUserId());
-    if (generateUserId()===0){
-        return users
-    }
-    else
-    {
-        return users.map(x =>({
-            ...x,
-            industryTitle:industries[x.industry-1].title
-        }))
-    }
+    
+    return users.map(x =>({
+        ...x,
+        industryTitle:()=>{
+            if ( parseInt(x.industry)<1 )
+                return ''
+            else
+                return industries[x.industry-1].title
+        }
+    }))
 }
 
 export function deleteUser(id){
