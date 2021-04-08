@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
-import Register from '../pages/Register/Register';
+//import Register from '../pages/Register/Register';
 import ViewUsers from '../pages/Register/ViewUsers';
 
 import { createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';

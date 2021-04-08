@@ -1,6 +1,5 @@
 import { makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
-import {Button} from '@material-ui/core';
 
 
 const useStyles = makeStyles(theme => ({
@@ -17,7 +16,6 @@ const useStyles = makeStyles(theme => ({
         position:'relative',
         height:'120px',
         width:'100%',
-        background: 'rgb(255,255,255)',
         background: 'linear-gradient(169deg, rgba(255,255,255,1) 75%, rgba(40,55,89,1) 10%)',
     },
     logo:{

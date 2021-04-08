@@ -70,7 +70,7 @@ export default function RegisterForm(props) {
                 ...recordForEdit
             })
         }
-    }, [recordForEdit])
+    })
 
     return (
         <Form onSubmit={handleSubmit}>
