@@ -157,7 +157,7 @@ export default function RegisterForm(props) {
                         type="reset"
                         color="default"
                         text="Reset"
-                        onClick={resetForm}
+                        onClick={resetForm} 
                     />
                 </div>
             </Grid>
