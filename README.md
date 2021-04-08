@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Logomation Logo Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Getting Started with Create React App
+
+Developer: Chandima Jayasiri
+Developer email: chandimaj@icloud.com
+Owner: Logomation
+
+
+### Firebase Deployment reference
+[https://dev.to/sama/deploying-a-react-app-to-firebase-2lda]
+
+
 
 ## Available Scripts
 
@@ -68,3 +78,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
