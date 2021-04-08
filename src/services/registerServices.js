@@ -41,10 +41,18 @@ export function getAllUsers() {
     //map industries id to indistries title
     
     let industries = getIndustriesList();
-    return users.map(x =>({
-        ...x,
-        industryTitle:industries[x.industry-1].title
-    }))
+
+    console.log(generateUserId());
+    if (generateUserId()===0){
+        return users
+    }
+    else
+    {
+        return users.map(x =>({
+            ...x,
+            industryTitle:industries[x.industry-1].title
+        }))
+    }
 }
 
 export function deleteUser(id){

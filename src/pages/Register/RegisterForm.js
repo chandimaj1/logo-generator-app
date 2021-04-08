@@ -18,7 +18,7 @@ const initialFValues = {
     email:'',
     mobile:'',
     country:'',
-    industry:'',
+    industry:1,
     gender:'male',
     dateOfBirth:new Date(2016,0,1),
     isAgree: false,
