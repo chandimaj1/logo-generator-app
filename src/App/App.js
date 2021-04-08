@@ -2,10 +2,17 @@ import React from 'react';
 import './App.css';
 import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
-//import Register from '../pages/Register/Register';
+import Register from '../pages/Register/Register';
 import ViewUsers from '../pages/Register/ViewUsers';
-
 import { createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
+import { BrowserRouter as Router,
+         Switch, 
+         Route, 
+         Link,
+         useRouteMatch,
+         useParams
+      } from "react-router-dom";
+
 
 const theme = createMuiTheme({
   palette:{
@@ -66,17 +73,23 @@ function App() {
   const classes = useStyles();
 
   return (
-  <ThemeProvider theme={theme}>
-    <SideMenu />
-    <div className={classes.appMain}>
-      <Header />
-      
-      {/*<Register />*/}
-      {/*<ViewUsers />*/}
-      <ViewUsers />
-    </div>
-    <CssBaseline />
-  </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <SideMenu />
+        <div className={classes.appMain}>
+          <Header />
+          <Switch>
+            <Route exact path="/admin/manage-users">
+              <ViewUsers />
+            </Route>
+            <Route exact path="/create-account">
+              <Register />
+            </Route>
+          </Switch>
+        </div>
+        <CssBaseline />
+      </ThemeProvider>
+    </Router>
   );
 }
 
