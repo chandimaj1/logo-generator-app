@@ -96,7 +96,7 @@ function App() {
             </Route>
             <Route exact path="/logo-designer">
               <Iframe 
-                url="http://chandimaj.com/stickerprint"
+                url="https://chandimaj.com/stickerprint"
                 width="800"
                 height="500"
                 style={{height:'800px'}}
