@@ -11,6 +11,7 @@ import Controls from '../../components/controls/Controls';
 
 
 
+
 const useStyles = makeStyles(theme =>({
     noticeContent:{
       margin:theme.spacing(5),
@@ -1234,7 +1235,7 @@ export default function Register() {
                         <Typography variant="subtitle1" component="div">Select Shapes</Typography>
                     </div>
                 </Grid>
-                <Grid item xs={12} style={{padding:'8px'}}>
+                <Grid item xs={12} md={8} style={{padding:'8px'}}>
                     <div>
                     <InputBase
                             placeholder="Search Shapes"
@@ -1258,13 +1259,18 @@ export default function Register() {
                     </div>
                     
                 </Grid>
+                <Grid item xs={12} md={4} style={{padding:'8px'}}>
+                    <Typography variant="subtitle2" component="div">Selected Shapes</Typography>
+                    <div style={{margin:'8px', height:'200px', width:'100%'}}>
+                    </div>
+                </Grid>
             </Grid>
         </Paper> 
 
 
         <Paper className={classes.noticeContent}>
             <Grid container>
-            <Grid item xs={12} style={{padding:'8px'}}>
+                <Grid item xs={12} md={8} style={{padding:'8px'}}>
                     <div className={classes.wizardItem}>
                         <FormatShapesIcon />
                         <Typography variant="subtitle1" component="div">Select Fonts</Typography>
@@ -1276,6 +1282,16 @@ export default function Register() {
                                 className={classes.searchInput}
                             />
                         <FontPicker />
+
+                        <Controls.Button
+                            text="+ Add Font"
+                            color="secondary"
+                        />
+                    </div>
+                </Grid>
+                <Grid item xs={12} md={4} style={{padding:'8px'}}>
+                    <Typography variant="subtitle2" component="div">Selected Fonts</Typography>
+                    <div style={{margin:'8px', height:'200px', width:'100%'}}>
                     </div>
                 </Grid>
             </Grid>
@@ -1288,6 +1304,17 @@ export default function Register() {
                         <PaletteIcon />
                         <Typography variant="subtitle1" component="div">Select Colors</Typography>
                     </div>
+                </Grid>
+            </Grid>
+        </Paper>
+
+        <Paper className={classes.noticeContent}>
+            <Grid container>
+                <Grid item xs={12} style={{textAlign:'center'}}>
+                    <Controls.Button
+                        text="Generate my Logos"
+                        color="primary"
+                    />
                 </Grid>
             </Grid>
         </Paper>

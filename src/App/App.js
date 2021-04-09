@@ -14,6 +14,7 @@ import { BrowserRouter as Router,
           //useParams
       } from "react-router-dom";
 import SignIn from '../pages/Register/SignIn';
+import Iframe from 'react-iframe';
 
 
 const theme = createMuiTheme({
@@ -92,6 +93,14 @@ function App() {
             </Route>
             <Route exact path="/logo-wizard">
               <Wizard />
+            </Route>
+            <Route exact path="/logo-designer">
+              <Iframe 
+                url="http://chandimaj.com/stickerprint"
+                width="800"
+                height="500"
+                style={{height:'800px'}}
+              />
             </Route>
           </Switch>
         </div>
