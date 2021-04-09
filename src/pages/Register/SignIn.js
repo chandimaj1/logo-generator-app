@@ -47,10 +47,10 @@ export default function Register() {
         
         <Paper className={classes.pageContent}>
             <Grid container>
-                <Grid item xs={12} md={8}>
+                <Grid item xs={12} md={7}>
                         <SignInForm />
                 </Grid>
-                <Grid item xs={12} md={4}>
+                <Grid item xs={12} md={5}>
                     <Typography variant="subtitle1" component="div" style={{padding:'10px', textAlign:'center'}}>
                         Don't have a Logomation account yet ?
                     </Typography>

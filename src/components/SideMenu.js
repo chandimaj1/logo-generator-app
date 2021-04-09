@@ -112,6 +112,15 @@ export default function SideMenu() {
                             <ListItemText primary={"Logo Designer"}/>
                         </ListItem>
                     </Link>
+
+                    <Link to="/logo-designer-admin" className={classes.link}>
+                        <ListItem button className={classes.listItem}>
+                            <ListItemIcon>
+                                <CropFreeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={"Logo Designer Admin"}/>
+                        </ListItem>
+                    </Link>
                 </List>
             </div>
         </div>

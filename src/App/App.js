@@ -4,6 +4,7 @@ import SideMenu from '../components/SideMenu';
 import Header from '../components/Header';
 import Register from '../pages/Register/Register';
 import ViewUsers from '../pages/Register/ViewUsers';
+import Wizard from '../pages/LogoCreator/Wizard';
 import { createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from '@material-ui/core';
 import { BrowserRouter as Router,
          Switch, 
@@ -88,6 +89,9 @@ function App() {
             </Route>
             <Route exact path="/create-account">
               <Register />
+            </Route>
+            <Route exact path="/logo-wizard">
+              <Wizard />
             </Route>
           </Switch>
         </div>
