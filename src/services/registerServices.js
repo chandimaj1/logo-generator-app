@@ -17,6 +17,105 @@ const KEYS = {
     userId:'userId'
 }
 
+const initUsers = [
+    {
+        id:0,
+        firstName:'Jason',
+        lastName:'Bourne',
+        email:'thebourne@ultimatum.com',
+        mobile:'',
+        country:'in',
+        industry:1,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:1,
+        firstName:'David',
+        lastName:'Beckham',
+        email:'bananakicks@football.com',
+        mobile:'',
+        country:'us',
+        industry:2,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:2,
+        firstName:'Chandler',
+        lastName:'Bing',
+        email:'chandler@friends.com',
+        mobile:'',
+        country:'us',
+        industry:3,
+        gender:'other',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:3,
+        firstName:'Erick',
+        lastName:'Cartman',
+        email:'iamnotfat@southpark.com',
+        mobile:'',
+        country:'us',
+        industry:4,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:4,
+        firstName:'Stan',
+        lastName:'Marsh',
+        email:'ipuke@southpark.com',
+        mobile:'',
+        country:'us',
+        industry:4,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:5,
+        firstName:'Kyle',
+        lastName:'Browloski',
+        email:'iamajew@southpark.com',
+        mobile:'',
+        country:'us',
+        industry:4,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:6,
+        firstName:'Kenny',
+        lastName:'McKormick',
+        email:'idieallthetime@southpark.com',
+        mobile:'',
+        country:'us',
+        industry:4,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    },
+    {
+        id:7,
+        firstName:'Randy',
+        lastName:'Marsh',
+        email:'thegeologist@southpark.com',
+        mobile:'',
+        country:'us',
+        industry:4,
+        gender:'male',
+        dateOfBirth:new Date(1982,0,1),
+        isAgree: false,
+    }
+]
+
 export function insertUser(data) {
     let users = getAllUsers();
     //users = [];
@@ -35,8 +134,11 @@ export function updateUser(data){
 }
 
 export function getAllUsers() {
-    if (localStorage.getItem(KEYS.users)==null)
-        localStorage.setItem(KEYS.users, JSON.stringify([]) );
+    if (localStorage.getItem(KEYS.users)==null){
+        localStorage.setItem(KEYS.users, JSON.stringify(initUsers) );
+        localStorage.setItem(KEYS.userId, initUsers.length );
+    }
+        
     let users = JSON.parse( localStorage.getItem(KEYS.users) );
     //map industries id to indistries title
     
@@ -45,12 +147,7 @@ export function getAllUsers() {
     
     return users.map(x =>({
         ...x,
-        industryTitle:()=>{
-            if ( parseInt(x.industry)<1 )
-                return ''
-            else
-                return industries[x.industry-1].title
-        }
+        industryTitle: industries[x.industry-1].title
     }))
 }
 
@@ -58,12 +155,11 @@ export function deleteUser(id){
     let users = getAllUsers();
     users = users.filter(x=> x.id !== id);
     localStorage.setItem( KEYS.users, JSON.stringify(users));
-
 }
 
 export function generateUserId(){
     if (localStorage.getItem(KEYS.userId)==null)
-        localStorage.setItem(KEYS.userId, '0');
+        localStorage.setItem(KEYS.userId, '');
     var id = parseInt( localStorage.getItem(KEYS.userId));
     localStorage.setItem(KEYS.userId, (++id).toString() );
     return id;

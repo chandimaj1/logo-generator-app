@@ -8,10 +8,11 @@ import { createMuiTheme, CssBaseline, makeStyles, ThemeProvider } from '@materia
 import { BrowserRouter as Router,
          Switch, 
          Route, 
-        // Link,
-        // useRouteMatch,
-         //useParams
+         //Link,
+         //useRouteMatch,
+          //useParams
       } from "react-router-dom";
+import SignIn from '../pages/Register/SignIn';
 
 
 const theme = createMuiTheme({
@@ -79,7 +80,10 @@ function App() {
         <div className={classes.appMain}>
           <Header />
           <Switch>
-            <Route exact path="/admin/manage-users">
+            <Route exact path="/">
+              <SignIn />
+            </Route>
+            <Route exact path="/manage-users">
               <ViewUsers />
             </Route>
             <Route exact path="/create-account">

@@ -2,10 +2,10 @@ import { makeStyles, Typography, List, ListItem, ListItemIcon, ListItemText } fr
 import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import CropFreeIcon from '@material-ui/icons/CropFree';
-import { BrowserRouter as Link} from "react-router-dom";
+import DeveloperBoardIcon from '@material-ui/icons/DeveloperBoard';
+import {Link} from "react-router-dom";
 
 
 const useStyles = makeStyles(theme => ({
@@ -57,7 +57,7 @@ export default function SideMenu() {
     return (
         <div className={classes.sideMenu}>
             <div className={classes.logoArea}>
-                <img src="../logomation_logo.png" alt="Logomation logo" className={classes.logo} />
+                <img src="logomation_logo.png" alt="Logomation logo" className={classes.logo} />
                 <Typography 
                     variant="subtitle2"
                     component="div"
@@ -77,15 +77,6 @@ export default function SideMenu() {
                         </ListItem>
                     </Link>
 
-                    <Link to="/sign-in" className={classes.link}>
-                        <ListItem button className={classes.listItem} >
-                            <ListItemIcon>
-                                <ExitToAppIcon />
-                            </ListItemIcon>
-                            <ListItemText primary={"Sign In"}/>
-                        </ListItem>
-                    </Link>
-
                     <Link to="/create-account" className={classes.link}>
                         <ListItem button className={classes.listItem}>
                             <ListItemIcon>
@@ -95,12 +86,21 @@ export default function SideMenu() {
                         </ListItem>
                     </Link>
 
-                    <Link to="/admin/manage-users" className={classes.link}>
+                    <Link to="/manage-users" className={classes.link}>
                         <ListItem button className={classes.listItem}>
                             <ListItemIcon>
                                 <PeopleAltIcon />
                             </ListItemIcon>
                             <ListItemText primary={"Manage Users"}/>
+                        </ListItem>
+                    </Link>
+
+                    <Link to="/logo-wizard" className={classes.link}>
+                        <ListItem button className={classes.listItem}>
+                            <ListItemIcon>
+                                <DeveloperBoardIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={"Logo Wizard"}/>
                         </ListItem>
                     </Link>
 
