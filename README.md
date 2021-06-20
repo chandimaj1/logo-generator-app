@@ -1,17 +1,4 @@
-# Logomation Logo Generator
-
-## Getting Started with Create React App
-
-Developer: Chandima Jayasiri
-Developer email: chandimaj@icloud.com
-Owner: Logomation
-
-
-### Firebase Deployment reference
-[https://dzone.com/articles/react-apps-firebase] Best
-[https://dev.to/sama/deploying-a-react-app-to-firebase-2lda] Reference 1
-[https://www.codaffection.com/react-article/react-firebase-crud/#Create_React_App] Code Affection
-
+# Logo Generator with Machine Learning (React App)
 
 ## Available Scripts
 
